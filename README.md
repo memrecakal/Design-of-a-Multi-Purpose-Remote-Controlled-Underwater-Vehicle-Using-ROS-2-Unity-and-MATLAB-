@@ -1,28 +1,47 @@
 # Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-
 Design of a Multi-Purpose Remote-Controlled Underwater Vehicle Using ROS#/2, Unity and MATLAB 
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+## Table of Contents  
+[Intro](#intro)  
+[Requirements & Constraints](#reqscons)  
+[Design](#design)  
+[Dynamics & Control](#dynamicscontrol)  
 
-Intro
+[CFD Analysis](#cfd)  
+[Sensors](#sensors)  
+[Overall Communication Scheme](#overallcomm)  
+[Simulation](#simulation)  
 
-Requirements & Constrains
+[Manufacturing](#manuf)  
+[Application](#application)  
 
-Desing
+<a name="intro"/>
+## Intro
 
-dynamics & Control
+<a name="reqscons"/>
+## Requirements & Constraints
 
-CFD
+<a name="design"/>
+## Design
 
-Sensors
+<a name="dynamicscontrol"/>
+## Dynamics & Control
 
-Overall Communication Scheme
+<a name="cfd"/>
+## CFD Analysis
 
-Simulation
+<a name="sensors"/>
+## Sensors
 
-Manufacturing
+<a name="overallcomm"/>
+## Overall Communication Scheme
+
+<a name="simulation"/>
+## Simulation
+
+<a name="manuf"/>
+## Manufacturing
+
+<a name="application"/>
+## Application
 
