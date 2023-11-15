@@ -3,40 +3,38 @@ Design of a Multi-Purpose Remote-Controlled Underwater Vehicle Using ROS#/2, Uni
 
 ## Table of Contents  
 [Intro](#intro)  
-[Requirements & Constraints](#reqscons)  
+[Requirements & Constraints](#Requirements-&-Constraints)  
 [Design](#design)  
 [Dynamics & Control](#dynamicscontrol)  
-
 [CFD Analysis](#cfd)  
 [Sensors](#sensors)  
 [Overall Communication Scheme](#overallcomm)  
 [Simulation](#simulation)  
-
 [Manufacturing](#manuf)  
 [Application](#application)  
 
-<a name="intro"/>
+
 ## Intro
 
-<a name="reqscons"/>
 ## Requirements & Constraints
 
-<a name="design"/>
 ## Design
 
-<a name="dynamicscontrol"/>
 ## Dynamics & Control
 
-<a name="cfd"/>
 ## CFD Analysis
 
-<a name="sensors"/>
-## Sensors
+## Hardware
+* ### Actuators
+* ### Sensors
+* ### Controllers
+* ### Networking 
+  - #### Latency Analysis
 
-<a name="overallcomm"/>
-## Overall Communication Scheme
+## Communication
+* ### Simulated Scheme
+* ### Application Scheme
 
-<a name="simulation"/>
 ## Simulation
 
 <a name="manuf"/>
