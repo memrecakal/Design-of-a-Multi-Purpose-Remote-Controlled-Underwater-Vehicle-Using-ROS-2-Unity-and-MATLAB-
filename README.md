@@ -28,18 +28,20 @@ Design of a Multi-Purpose Remote-Controlled Underwater Vehicle Using ROS#/2, Uni
 * ### Actuators
 * ### Sensors
 * ### Controllers
+  - #### Android Control Panel
+  - #### Overal Electronics Scheme 
 * ### Networking 
   - #### Latency Analysis
 
 ## Communication
-* ### Simulated Scheme
+* ### Overall Approach
+* ### Simulated Scheme: Complete Unity & ROS MATLAB Control Integration 
+*   - #### Unity + ROS#: Physics & Plant Implementation
+*   - #### MATLAB + ROS2: Control Integration
+
 * ### Application Scheme
 
-## Simulation
 
-<a name="manuf"/>
 ## Manufacturing
 
-<a name="application"/>
-## Application
 
