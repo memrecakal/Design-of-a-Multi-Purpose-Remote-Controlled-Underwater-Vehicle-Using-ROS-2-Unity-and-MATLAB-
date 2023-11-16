@@ -10,7 +10,7 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 
 
 ## Table of Contents  
-[Intro](#intro)  
+[Introduction](#Introduction)  
 [Requirements & Constraints](#Requirements-&-Constraints)  
 [Design](#design)  
 [Dynamics & Control](#dynamicscontrol)  
@@ -22,7 +22,17 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 [Application](#application)  
 
 
-## Intro
+## Introduction
+
+The goal of this project is to design a versatile underwater vehicle that can be controlled remotely while meeting the project's requirements and constraints. The primary objective is to create a vehicle with 4 degrees of freedom (DOF) capable of maintaining its position underwater. Specifically, the vehicle should be capable of linear movement in the Z-axis (horizontal movement), Y-axis (depth control), as well as rotation in the Y-axis (yaw) and X-axis (pitch). The vehicle must gather data from its environment in real-time to enable feedback control and research purposes. Sensors onboard the vehicle will collect this data, which will be transmitted to the control center for analysis. To enable remote control, the ballast mechanism has been proposed to change the vehicle's overall density, thereby allowing control of its depth and angle of attack. The side motors facilitate forward movement and right-left turning. We used Matlab, Unity, and ROS environments to create relevant simulations to model the system dynamics for simulation and design purposes. During the design process, ANSYS analysis aided in the design of the vehicle's outer shell, and simulations were used to replicate real-time conditions. Impermeability was taken into account, and the vehicle was designed accordingly to ensure it would withstand underwater conditions.
+
+The design of the system is based on the fundamental requirements of the mission. To achieve four degrees of freedom, coupled brushless motors and ballast tanks are placed symmetrically. The motors provide axial rotation in the Y-axis and linear thrust in the Z-axis, while the ballast tanks provide axial rotation in the X-axis and linear motion in the Y-axis. This configuration enables the vehicle to execute sharp and accurate maneuvers, allowing it to operate in unstable conditions and providing operational flexibility in confined spaces.
+
+The vehicle hosts five sensors for collecting data from its surroundings: pH, temperature, depth, flow rate sensors, and an IMU. Further, a camera is mounted under the body for surveillance and observation. The vehicle can be controlled using an Android application with touchscreen joysticks and sliders for depth, angle, and position control. Further, all sensors can be monitored through the app. A robust and stable communication infrastructure is built using the Robot Operating System (ROS) for such complicated network traffic between underwater and the user.
+
+
+
+
 
 ## Communication Framework
 * ### Overall Approach
@@ -35,7 +45,10 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 *   - #### MATLAB + ROS2: Control Integration
 
 * ### Application Scheme
-![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/4d201027-3676-40e6-9ce7-661b579bac96)
+    <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/53acfc1c-e10e-446e-98a0-2369c7520680" width="1000">
+    </p>
+
 
 ## Hardware
 * ### Networking
