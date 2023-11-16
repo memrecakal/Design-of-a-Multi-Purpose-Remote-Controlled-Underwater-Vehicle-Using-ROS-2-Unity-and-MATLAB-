@@ -1,12 +1,7 @@
 # Design of a Multi-Purpose Remote Controlled Underwater Vehicle Using ROS/#2 Unity and MATLAB 
 
 
-
-https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/58662574-7a59-4066-89c7-c9a6a48f79b9
-
-
-
-![Screenshot from 2022-12-09 04-13-06](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/86a9250d-d84f-4fc0-8f5a-6e96336f312b)
+https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/c7fa2567-20bf-470b-a517-2e06a2aef68b
 
 
 ## Table of Contents  
