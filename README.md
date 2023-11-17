@@ -3,8 +3,25 @@
 https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/48d742b0-af88-4932-8862-06c4480a053f
 
 ## Table of Contents  
-[Introduction](#Introduction)  
-[Requirements & Constraints](#Requirements-&-Constraints)  
+1. [Introduction](#Introduction)
+2. [Communication Framework]
+    - [Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration]
+       * [Unity + ROS#: Physics & Plant Implementation]
+       * [MATLAB + ROS2: Control Integration]
+    - [Application Scheme](#Application-Scheme)
+3. [Hardware](#Hardware)
+    - [Networking](#Networking)
+      *  Android Control Panel
+      * Raspberry Pi /  ESP32
+      * Latency Analysis
+    - Actuators
+    - Sensors
+    - Overall Electronics Scheme
+4. Dynamics & Control
+5. Design
+6. CFD Analysis
+7. Manufacturing
+
 [Design](#design)  
 [Dynamics & Control](#dynamicscontrol)  
 [CFD Analysis](#cfd)  
