@@ -37,10 +37,12 @@ During the design process, CFD and mechanical structure analysis aided in the de
 ## Communication Framework
 * ### Overall Approach
 * ### Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration
-* ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/bd298083-f39a-47ee-aba1-2502b9cc0714)
+
+https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/2c0ef805-bacb-44d1-91fd-95227bf3966a
+  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/bd298083-f39a-47ee-aba1-2502b9cc0714)
 
 *   - #### Unity + ROS#: Physics & Plant Implementation
-    - ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/4c5ac077-d3c0-4aca-9f2d-831b5bbd0c4b)
+    ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/4c5ac077-d3c0-4aca-9f2d-831b5bbd0c4b)
 
 *   - #### MATLAB + ROS2: Control Integration
 
@@ -50,11 +52,6 @@ During the design process, CFD and mechanical structure analysis aided in the de
     </p>
 
     
-
-https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/9ba1059d-65e5-4230-80ef-5c142ab53830
-
-
-
 
 ## Hardware
 * ### Networking
