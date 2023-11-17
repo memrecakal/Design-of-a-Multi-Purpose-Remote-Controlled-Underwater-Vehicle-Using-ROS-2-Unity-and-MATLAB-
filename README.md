@@ -32,7 +32,7 @@ MATLAB, Unity Engine, and ROS# (coupled with ROS2) are used to create relevant d
 
 For simulation, instead of using the real vehicle, ESP32, and Raspberry, a physics environment is modeled within Unity Engine. Rather than using Unity's built-in 'Rigidbody dynamics,' all the relative forces acting upon the vehicle are implemented according to [Dynamics & Control](#Dynamics-&-Control) for feasible communication between simulated sensors and MATLAB MIMO controller (using ROS MATLAB toolbox, taking input feedback from the Android app, and sending motor actuation to Unity). Including the wireless router, the remaining system is kept the same (see [Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration](#Simulated-Scheme:-Complete-Unity-&-ROS-&-MATLAB-Control-Integration) for details).  
 
-During the design process, CFD and mechanical structure analysis aided in the design of the vehicle's outer shell, and simulations were used to replicate real-time conditions. Impermeability was taken into account, and the vehicle was designed accordingly to ensure it would withstand underwater conditions (see [Design](#Desing) and (see [CFD Analysis](#CFD-Analysis) for details) for details).
+During the design process, CFD and mechanical structure analysis aided in the design of the vehicle's outer shell, and simulations were used to replicate real-time conditions. Impermeability was taken into account, and the vehicle was designed accordingly to ensure it would withstand underwater conditions (see [Design](#Desing) and [CFD Analysis](#CFD-Analysis) for details).
 
 
 
