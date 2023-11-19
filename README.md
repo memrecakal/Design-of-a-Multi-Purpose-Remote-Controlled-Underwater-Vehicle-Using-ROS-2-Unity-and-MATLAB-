@@ -75,14 +75,21 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     The Raspberry Pi 4B is the vehicle's central hub for surface communication, tackling challenges with radio signal limitations in underwater missions. Balancing the need for a real-time camera stream within feasible ranges involves a blend of cabled and wireless communication. An underwater ethernet connection links the Raspberry to a floating platform hosting a wireless router, ensuring proper frequency radio waves (e.g., 2.4GHz Wi-Fi) facilitate a substantial horizontal range from the water's surface to land. Meanwhile, the ESP32 manages IMU readings and motor actuation independently but relies on communication with the Raspberry for reliable surface connection. Although the Raspberry could theoretically handle additional sensors and motors, constraints during the initial design phase, including budget limitations, led to utilizing an older Raspberry model, prompting the need for ESP32 support.
     
   - #### Latency Analysis
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/946cba39-f76f-4c17-a6f9-a426141222bd)
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/3de87b6a-09c0-4aa0-b3ec-0d607de55c54)
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/89b6d2f2-4b48-4423-804a-ec7ac8bda769)
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/78531717-c70d-4ede-8676-a6d6cf6327a3)
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/5c2669f2-9059-4d0f-972b-94f0c713a8ac)
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/1a11cb74-2f9e-4627-ab96-7acf17e42b28) esp time measurement
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/2d03d7f3-b234-4a0d-8567-ea40d7720d95) slow tablet
+    <img align="left" width="40%" src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/78531717-c70d-4ede-8676-a6d6cf6327a3"> 
+    Network analysis is conducted on two core steps: the physical and application layers. The physical layer includes ethernet and Wi-Fi latency and package loss. 20m long ethernet cable from Raspberry to the PC results in approximately 2ms of delay and no package loss. Including the wireless router increases latency up to 8ms with little to no package loss, which is sufficient for the project.  
+    
+    The application layer includes everything in the [application scheme](#Application-Scheme) except the Android tablet. Measured latency indicates the time frame from a sensor reading from ESP32 to the corresponding ESP32 motor actuation calculated by the MATLAB controller (with the given input). Sensor reading from ESP32 goes to the Raspberry, and it is transferred to the control app over the wireless modem. The control app sends controller input and sensor readings to MATLAB, and after calculation, the desired motor actuation is sent to the ESP32 similarly. This process, on average, lasts 50ms according to the timer tics of ESP32 (see the Figure below.)
+    
+    <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/5c2669f2-9059-4d0f-972b-94f0c713a8ac" width="800">
+    </p>
 
+    Overall system latency varies between 150 - 260ms, which is heavily driven by the ten-years-old Android tablet :) Due to financial limits, it was the only choice, and its latency analysis was carried out intuitively rather than experimental. With a more modern device, a smoother experience can be achieved, as now it is proven that the ROS framework in this project is snappy enough.
+    
+    <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/2d03d7f3-b234-4a0d-8567-ea40d7720d95" width="1000">
+    </p>
+    
 * ### Actuators
 * ### Sensors
 * ### Overal Electronics Scheme
