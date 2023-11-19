@@ -138,13 +138,8 @@ During the design process, CFD and mechanical structure analysis aided in the de
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/157c1dc2-aaea-4571-96db-d726e22226a0" width="500">
 </p>
 <p align="center" width="100%">
-    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b5936b06-70af-40f2-9d36-288d7b328941" width="900">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b5936b06-70af-40f2-9d36-288d7b328941" width="800">
 </p>
-
-
-
-![image]()
-
 
 
 
