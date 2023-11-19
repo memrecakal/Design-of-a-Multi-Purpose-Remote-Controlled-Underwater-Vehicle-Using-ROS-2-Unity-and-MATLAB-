@@ -73,6 +73,8 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
 ## Hardware
 * ### Networking
   - #### Android Control Panel
+    The Android tablet controls the vehicle via a Unity/ROS# app, offering sensor monitoring, camera streaming, and input controls. Sensor readings for depth and angle are displayed through sliders while adjusting these values sends inputs to the MATLAB controller. MATLAB's output, the syringe occupancies, directs the vehicle's desired angle and depth via ESP32 (connected through Raspberry). However, the side motors responsible for linear movement bypass the controller, receiving PWM values directly from a joystick on the app's bottom left, transmitted to ESP32 via Raspberry.
+    
   - #### Raspberry Pi & ESP32
   - #### Latency Analysis
   ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/946cba39-f76f-4c17-a6f9-a426141222bd)
