@@ -6,9 +6,8 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 1. [Introduction](#Introduction)
 2. [Communication Framework](#Communication-Framework)
     - [Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration](#simulated-scheme-complete-unity--ros--matlab-control-integration)
-        * [Unity + ROS#: Physics & Plant Implementation](#unity--ros-physics--plant-implementation)
-        * [MATLAB + ROS2: Control Integration](#matlab--ros2-control-integration)
-
+      * [Unity + ROS#: Physics & Plant Implementation](#unity--ros-physics--plant-implementation)
+      * [MATLAB + ROS2: Control Integration](#matlab--ros2-control-integration)
     - [Application Scheme](#Application-Scheme)
 3. [Hardware](#Hardware)
     - [Networking](#Networking)
