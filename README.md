@@ -1,8 +1,3 @@
-<div style="background-color:#FFFFFF; padding: 10px;">
-
-
-
-
 # Design of a Multi-Purpose Remote Controlled Underwater Vehicle Using ROS/#2 Unity and MATLAB 
 
 https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/48d742b0-af88-4932-8862-06c4480a053f
@@ -34,12 +29,15 @@ The project aims to create a versatile remote-controlled underwater vehicle with
 ## Communication Framework
 https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/f7dad394-ada4-44de-b159-59335845e236
 
+For this project, sensor feedback is critical for reliable underwater dynamics; even a small latency or error within the transferred IMU readings can result in dangerous motor actuation. So, ROS is chosen for its trustworthy communication capabilities. 
+
 * ### Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration
     For simulation, instead of using the real vehicle, ESP32, and Raspberry, a physics environment is modeled within Unity Engine. Rather than using Unity's built-in 'Rigidbody dynamics,' all the relative forces acting upon the vehicle are implemented according to [Dynamics & Control](#Dynamics-&-Control) for feasible communication between simulated sensors and MATLAB MIMO controller (using ROS MATLAB toolbox, taking input feedback from the Android app, and sending motor actuation to Unity). Including the wireless router, the remaining system is kept the same (see [Simulated Scheme: Complete Unity & ROS & MATLAB Control Integration](#Communication-Framework) for details).  
 
+    <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/bd298083-f39a-47ee-aba1-2502b9cc0714" width="800">
+    </p>
 
-
-  ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/bd298083-f39a-47ee-aba1-2502b9cc0714)
 
 *   - #### Unity + ROS#: Physics & Plant Implementation
     ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/4c5ac077-d3c0-4aca-9f2d-831b5bbd0c4b)
@@ -47,6 +45,10 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 *   - #### MATLAB + ROS2: Control Integration
 
 * ### Application Scheme
+    <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b3d55012-8586-4fe9-8cd7-87eadad9ef78" width="1000">
+    </p>
+
     <p align="center" width="100%">
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/53acfc1c-e10e-446e-98a0-2369c7520680" width="1000">
     </p>
@@ -92,5 +94,4 @@ During the design process, CFD and mechanical structure analysis aided in the de
 
 ## Manufacturing
 
-</div>
 
