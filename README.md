@@ -56,25 +56,9 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/c19488b8-a2fe-4754-b809-17e60eebbb6d" width="850"> 
     </p>
     Additionally, to provide visual feedback to the user, the simulated camera feed needs transmission to the Android controller app. This involves modifying the "CompressedImagePublisher" class (along with the message structures and headers) of the ROS# library, which originally caters to ROS1, to accommodate ROS2 requirements. Regarding MATLAB's connection with ROS, while MATLAB's ROS Toolbox offers official support for ROS, there's no current support for ROS Bridge, requiring MATLAB and ROS Master to run on the same hardware. Data exchange between ROS and MATLAB necessitates global variables and initializing specific nodes for communication, while additional timers with consistent time steps and corresponding callback functions ensure uninterrupted data updates between ROS and MATLAB without interfering with the MIMO loop.
-
-    ```matlab
-    function listener_callback(obj, event, depth_message, desired_depth_message, ...
-    desired_imu_message, imu_message)
-    global unity_depth;
-    global unity_imu;
-    global unity_desired_depth;
-    global unity_desired_imu;
-    unity_depth = -str2double(depth_message.LatestMessage.data);
-    unity_imu = str2double(imu_message.LatestMessage.data);
-    unity_desired_imu = str2double(desired_imu_message.LatestMessage.data);
-    unity_desired_depth = str2double(desired_depth_message.LatestMessage.data);
-    end
-    ```
     
-
-
 * ### Application Scheme
-    <img align="right" width="60%" src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b3d55012-8586-4fe9-8cd7-87eadad9ef78"> 
+    <img align="right" width="55%" src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b3d55012-8586-4fe9-8cd7-87eadad9ef78"> 
     
     The prototype employs various networking components: an ESP32, Raspberry Pi 4B (serving as the ROS2 node host), a wireless router (establishing a local network between the surface and underwater), a PC functioning as the ROS master, and an Android tablet as the remote controller using the Unity App connected to ROS#. The Android app interface includes touchscreen joysticks and sliders for controlling depth, angle, and position, allowing monitoring of all sensors. In contrast to the simulation setup, the hardware replaces the Unity simulation. Within this setup, the Raspberry Pi acts as the communication hub underwater, hosting ROS nodes and managing outgoing sensor data and incoming motor commands for control. All sensors, except the IMU, are linked to the Raspberry Pi, as the ESP32's IMU libraries offer greater reliability. The IMU sensor readings are transmitted from the ESP32 to the Raspberry Pi via a USB cable (UART), and from there, they are relayed to the Android app for monitoring and to MATLAB for feedback control. MATLAB-calculated syringe occupancies are also transmitted to the ESP32 via the Raspberry Pi to drive motor actions.
 
