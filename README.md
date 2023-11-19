@@ -51,25 +51,37 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/c3ad0d26-e19b-446f-92e4-664aa39afc0c" width=850> 
     </p>
     
-    The depth and angle control system rely on a MIMO controller in MATLAB, requiring inputs of desired depth, desired angle, and sensor feedback for both depth and angle. User-controlled data for desired depth and angle are managed through the Android application, while sensor data originating from the Raspberry Pi in the real-world setup is simulated within Unity Engine for the prototype. Simulated sensor data intentionally introduces delays and noise to mimic real-world conditions. MATLAB's MIMO controller calculates outputs determining the occupancy of syringes, essential for simulating water mass changes in the Unity environment. Additional scripts such as "rearSyringeSub" and "front_syringe_sub" act as intermediaries between Unity and MATLAB, managing the flow of data related to syringe occupancy. Upon receiving this data, Unity employs the "syringeForce" class to translate syringe occupancy into the corresponding force to adjust water mass.
-
-    Additionally, to provide visual feedback to the user, the simulated camera feed needs transmission to the Android controller app. This involves modifying the "CompressedImagePublisher" class (along with the  message structures and headers) of the ROS# library, which originally caters to ROS1, to accommodate ROS2 requirements. Regarding MATLAB's connection with ROS, while MATLAB's ROS Toolbox offers official support for ROS, there's no current support for ROS Bridge, requiring MATLAB and ROS Master to run on the same hardware. Data exchange between ROS and MATLAB necessitates global variables and initializing specific nodes for communication, while additional timers with consistent time steps and corresponding callback functions ensure uninterrupted data updates between ROS and MATLAB without interfering with the MIMO loop.
-
+    The depth and angle control system rely on a MIMO controller in MATLAB, requiring inputs of desired depth, desired angle, and sensor feedback for both depth and angle. User-controlled data for desired depth and angle are managed through the Android application, while sensor data originating from the Raspberry Pi in the real-world setup is simulated within Unity Engine for the prototype. Simulated sensor data intentionally introduces delays and noise to mimic real-world conditions. MATLAB's MIMO controller calculates outputs determining the occupancy of syringes, essential for simulating water mass changes in the Unity environment. Additional ROS# listener scripts within Unity act as intermediaries between Unity and MATLAB, managing the flow of data related to syringe occupancy. Upon receiving this data, Unity employs the "syringeForce" class to translate syringe occupancy into the corresponding force to adjust water mass.
     <p align="center" width="100%">
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/c19488b8-a2fe-4754-b809-17e60eebbb6d" width="850"> 
     </p>
+    Additionally, to provide visual feedback to the user, the simulated camera feed needs transmission to the Android controller app. This involves modifying the "CompressedImagePublisher" class (along with the message structures and headers) of the ROS# library, which originally caters to ROS1, to accommodate ROS2 requirements. Regarding MATLAB's connection with ROS, while MATLAB's ROS Toolbox offers official support for ROS, there's no current support for ROS Bridge, requiring MATLAB and ROS Master to run on the same hardware. Data exchange between ROS and MATLAB necessitates global variables and initializing specific nodes for communication, while additional timers with consistent time steps and corresponding callback functions ensure uninterrupted data updates between ROS and MATLAB without interfering with the MIMO loop.
+
+    ```matlab
+    function listener_callback(obj, event, depth_message, desired_depth_message, ...
+    desired_imu_message, imu_message)
+    global unity_depth;
+    global unity_imu;
+    global unity_desired_depth;
+    global unity_desired_imu;
+    unity_depth = -str2double(depth_message.LatestMessage.data);
+    unity_imu = str2double(imu_message.LatestMessage.data);
+    unity_desired_imu = str2double(desired_imu_message.LatestMessage.data);
+    unity_desired_depth = str2double(desired_depth_message.LatestMessage.data);
+    end
+    ```
+    
 
 
 * ### Application Scheme
-    <p align="center" width="100%">
-    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b3d55012-8586-4fe9-8cd7-87eadad9ef78" width="1000">
-    </p>
+    <img align="right" width="53%" src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/b3d55012-8586-4fe9-8cd7-87eadad9ef78"> 
+    For the prototype, networking hardware is an ESP32, Raspberry Pi 4B (hosting ROS2 nodes), a wireless router (for creating a local network between the ground and underwater), a PC (as ROS master), and an Android tablet as the remote controller (with the Unity for connecting to ROS#). Android app has touchscreen joysticks and sliders for depth, angle, and position control, and all sensors can be monitored through the app. (see [Application Scheme](#Application-Scheme) for details). 
 
     <p align="center" width="100%">
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/53acfc1c-e10e-446e-98a0-2369c7520680" width="1000">
     </p>
 
-    For the prototype, networking hardware is an ESP32, Raspberry Pi 4B (hosting ROS2 nodes), a wireless router (for creating a local network between the ground and underwater), a PC (as ROS master), and an Android tablet as the remote controller (with the Unity for connecting to ROS#). Android app has touchscreen joysticks and sliders for depth, angle, and position control, and all sensors can be monitored through the app. (see [Application Scheme](#Application-Scheme) for details). 
+    
 
     
 
