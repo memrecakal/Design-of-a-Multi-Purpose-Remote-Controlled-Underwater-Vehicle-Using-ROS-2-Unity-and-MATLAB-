@@ -102,16 +102,21 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     </p>
 
 * ### Overal Electronics Scheme
+  Here is the scheme for the final design, followed by the prototype (Raspberry is removed).
+  <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/bf2da2ca-797c-48f2-8695-ad8bfc3a097c" width="900">
+    </p>
 
-
-
-
+  <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/3a1e6da4-9f51-4959-b0d0-cab2e54e00bc" width="900">
+    </p>
 
 ## Dynamics & Control
-
-![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/0f5b07e2-5f33-486d-a381-42d62917e081)
-
 Regarding the vehicle's dynamics, the aim was to create a vehicle with 4 degrees of freedom (DOF) capable of maintaining its position while submerged. Specifically, the vehicle should be capable of linear movement in the Z-axis (horizontal movement) and Y-axis (depth control), as well as rotation in the Y-axis (yaw) and X-axis (pitch). For such movement control, the ballast mechanism has been proposed to change the vehicle's overall density, thereby allowing control of its depth and angle of attack. The side motors facilitate forward movement and right-left turning. Further, coupled brushless motors and ballast tanks are placed symmetrically. The motors provide axial rotation on the Y-axis and linear thrust on the Z-axis, while the ballast tanks provide axial rotation on the X-axis and linear motion on the Y-axis (see [Dynamics & Control](#Dynamics-&-Control) for details). This configuration enables the vehicle to execute sharp and accurate maneuvers, allowing it to operate in unstable conditions and providing operational flexibility in confined spaces. KONTROL EKLE!
+
+<p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/0f5b07e2-5f33-486d-a381-42d62917e081" width="900">
+    </p>
 
 ## Design
 ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/d5ebc5e2-90df-459d-8b28-87b4527c61cd)
