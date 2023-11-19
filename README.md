@@ -66,16 +66,14 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/53acfc1c-e10e-446e-98a0-2369c7520680" width="1000">
     </p>
 
-    
-
-    
-
 ## Hardware
 * ### Networking
   - #### Android Control Panel
     The Android tablet controls the vehicle via a Unity/ROS# app, offering sensor monitoring, camera streaming, and input controls. Sensor readings for depth and angle are displayed through sliders while adjusting these values sends inputs to the MATLAB controller. MATLAB's output, the syringe occupancies, directs the vehicle's desired angle and depth via ESP32 (connected through Raspberry). However, the side motors responsible for linear movement bypass the controller, receiving PWM values directly from a joystick on the app's bottom left, transmitted to ESP32 via Raspberry.
     
   - #### Raspberry Pi & ESP32
+    The Raspberry Pi 4B is the vehicle's central hub for surface communication, tackling challenges with radio signal limitations in underwater missions. Balancing the need for a real-time camera stream within feasible ranges involves a blend of cabled and wireless communication. An underwater ethernet connection links the Raspberry to a floating platform hosting a wireless router, ensuring proper frequency radio waves (e.g., 2.4GHz Wi-Fi) facilitate a substantial horizontal range from the water's surface to land. Meanwhile, the ESP32 manages IMU readings and motor actuation independently but relies on communication with the Raspberry for reliable surface connection. Although the Raspberry could theoretically handle additional sensors and motors, constraints during the initial design phase, including budget limitations, led to utilizing an older Raspberry model, prompting the need for ESP32 support.
+    
   - #### Latency Analysis
   ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/946cba39-f76f-4c17-a6f9-a426141222bd)
   ![image](https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/3de87b6a-09c0-4aa0-b3ec-0d607de55c54)
