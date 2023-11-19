@@ -91,7 +91,16 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     </p>
     
 * ### Actuators
+  <img align="right" width="30%" src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/0662fc42-c0b3-4934-b469-a0f4e49200e1"> 
+  The final design includes two brushless side motors for linear movement and two stepper motors for syringe tank actuation. Selected Degz Mitras M1 brushless motors can produce 3kg-f boost force at 25V (10A) while providing IPX9 waterproof. They are coupled with Degz Blu 30A drivers. For syringes, 7HS4401 Nema 17 step motors can provide 20Nm torque at 16.8V (6A). An affordable off-shelf A4988 driver is coupled with stepper motors. 
+
 * ### Sensors
+  As discussed before, the final design includes five sensors: IMU, depth, temperature, pH, and flow rate. MPU6050 is selected as IMU due to its affordable price, although more precise IMU sensors are on the market. Depth and temperature sensors are combined in Degz M300 sensors that measure pressure up to 300m with 2mm precision and temperature up to 40ºC with 1ºC precision. Both MPU6050 and Degz M300 utilize I^2C serial protocol. For pH, the Diymore pH sensor is chosen for 0.1 resolution on a 0-14 pH scale. For the flow rate sensor, YF-S403 is chosen for its 1-30L/m working range. However, due to financial constraints, only essential sensors for dynamics are used in the prototype, which are IMU and depth/temperature sensors.
+
+  <p align="center" width="100%">
+    <img src="https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underwater-Vehicle-Using-ROS-2-Unity-and-MATLAB-/assets/42466646/8f0931cd-f42b-4854-a1f5-e548688ae343" width="900">
+    </p>
+
 * ### Overal Electronics Scheme
 
 
