@@ -119,20 +119,18 @@ Regarding the vehicle's dynamics, the aim was to create a vehicle with 4 degrees
     </p>
 
 ## Design
+The efficiency of underwater vehicles heavily influences their performance in terms of control, power use, maneuverability, and lift and drag forces, with the choice between an open frame or closed body design being pivotal. The closed-body design proves more efficient through research and evaluation, offering benefits such as waterproofing, improved hydrodynamics, reduced leakage risks, and enhanced stability at higher speeds than open-frame alternatives. Critical to the closed-body design is the pressure hull's thickness, essential for preventing system failure; analytical methods, like Von Mises' relation predicting pressure vessel thickness, guide its preliminary design for a 50-meter underwater pressure limit. Materials-wise, plastic components dominate the outer structure, with additive manufacturing likely used for the nose cone and motor mount, while the pressure hull will be an off-the-shelf extruded acrylic pipe. Sealing components, essential for maintaining tight tolerances, will primarily consist of aluminum. The complete detailed design report is available upon request. 
 <p align="center" width="100%">
     <img src="./imgs/15.png" width="900">
 </p>
 
-
 ## CFD Analysis
-During the design process, CFD and mechanical structure analysis aided in the design of the vehicle's outer shell, and simulations were used to replicate real-time conditions. Impermeability was considered, and the vehicle was designed accordingly to withstand underwater conditions.
+During the design process, CFD and mechanical structure analysis aided in the design of the vehicle's outer shell, and simulations were used to replicate real-time conditions. Impermeability was considered, and the vehicle was designed to withstand underwater conditions. The analysis involves several sub-analyses focusing on mesh, enclosure, geometry, velocity, angle of attack, and drag & lift force optimizations for various configurations. The findings reveal that propellers generate disrupted flow patterns behind them, leading to varying velocity magnitudes and directions in these regions. This irregular flow could result in vibrations and minor disruptive forces along the vehicle's path. Complete results are available upon request.
 <p align="center" width="100%">
     <img src="./imgs/16.png" width="900">
     </p>
 
-
 ## Manufacturing
-
 <p align="center" width="100%">
     <img src="./imgs/17.png" width="300">
     <img src="./imgs/18.png" width="500">
