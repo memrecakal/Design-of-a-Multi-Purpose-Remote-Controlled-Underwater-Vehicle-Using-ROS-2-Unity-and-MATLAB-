@@ -21,6 +21,7 @@ https://github.com/memrecakal/Design-of-a-Multi-Purpose-Remote-Controlled-Underw
 5. [Design](#design)
 6. [CFD Analysis](#CFD-Analysis)
 7. [Manufacturing](#manufacturing)
+8. [Closing Remarks](#Closing-Remarks)
 
 ## Introduction
 
@@ -112,7 +113,7 @@ For this project, sensor feedback is critical for reliable underwater dynamics; 
     </p>
 
 ## Dynamics & Control
-Regarding the vehicle's dynamics, the aim was to create a vehicle with 4 degrees of freedom (DOF) capable of maintaining its position while submerged. Specifically, the vehicle should be capable of linear movement in the Z-axis (horizontal movement) and Y-axis (depth control), as well as rotation in the Y-axis (yaw) and X-axis (pitch). For such movement control, the ballast mechanism has been proposed to change the vehicle's overall density, thereby allowing control of its depth and angle of attack. The side motors facilitate forward movement and right-left turning. Further, coupled brushless motors and ballast tanks are placed symmetrically. The motors provide axial rotation on the Y-axis and linear thrust on the Z-axis, while the ballast tanks provide axial rotation on the X-axis and linear motion on the Y-axis. This configuration enables the vehicle to execute sharp and accurate maneuvers, allowing it to operate in unstable conditions and providing operational flexibility in confined spaces. KONTROL EKLE!
+Regarding the vehicle's dynamics, the aim was to create a vehicle with 4 degrees of freedom (DOF) capable of maintaining its position while submerged. Specifically, the vehicle should be capable of linear movement in the Z-axis (horizontal movement) and Y-axis (depth control), as well as rotation in the Y-axis (yaw) and X-axis (pitch). For such movement control, the ballast mechanism has been proposed to change the vehicle's overall density, thereby allowing control of its depth and angle of attack. The side motors facilitate forward movement and right-left turning. Further, coupled brushless motors and ballast tanks are placed symmetrically. The motors provide axial rotation on the Y-axis and linear thrust on the Z-axis, while the ballast tanks provide axial rotation on the X-axis and linear motion on the Y-axis. This configuration enables the vehicle to execute sharp and accurate maneuvers, allowing it to operate in unstable conditions and providing operational flexibility in confined spaces. The design report is available upon request for detailed dynamics and control analysis.
 
 <p align="center" width="100%">
     <img src="./imgs/14.png" width="900">
@@ -131,6 +132,7 @@ During the design process, CFD and mechanical structure analysis aided in the de
     </p>
 
 ## Manufacturing
+One major key to _success_ in such a long-term project is time planning. Approximately the first ten weeks are spent on design, based on the ___agreed___ budget. As the deadline approached, prototyping and manufacturing were on focus in the remaining 15 weeks. Unfortunately, due to changing/limiting budget restrictions (towards the end of the deadline), the overall design and manufacturing process recursively updated. Even the most critical parts (Raspberry, ESP, router, IMU, etc.) could not be purchased but rented. Further, changing the budget during manufacturing costs an extraordinary amount of extra time and effort. Nevertheless, the vehicle is built with the promised core functions regarding communication and dynamics; however, without a budget, a testing environment could not be arranged. 
 <p align="center" width="100%">
     <img src="./imgs/17.png" width="300">
     <img src="./imgs/18.png" width="500">
@@ -138,6 +140,10 @@ During the design process, CFD and mechanical structure analysis aided in the de
 <p align="center" width="100%">
     <img src="./imgs/19.png" width="800">
 </p>
+
+## Closing Remarks
+In a group of 6, this was our graduation project. I was responsible for creating the communication infrastructure between the land and submarine (including the remote-control Android app), building low-level electronics systems and their connection to high-level controllers, and simulating the submarine physics, sensors, and MATLAB controller in Unity Engine with ROS#. I would like to thank my group mates for their efforts and contributions. Utku Akyüz was responsible for the dynamical modeling of the system, literature research of similar designs, and MATLAB physics plant of the vehicle. He also worked on the control system design and development. Özgür Demir was responsible for the control system design and Matlab simulation, with the dynamical model developed. The simulation results are used for optimizing the design and selecting the design parameters. Cahit İkbal Er was responsible for the sensor selection, cost and benefit analysis of the relevant sensors, and literature research. Ege Cura was responsible for the CAD design of the vehicle. He also designed the inside of the vehicle, including the dynamic and static parts. He was responsible for taking the necessary precautions for the impermeability concerns and updating the design. Atalay Çeber was responsible for the vehicle's motor selection, placement, and ANSYS analysis. He performed a series of analyses to optimize the design and provide the relevant coefficients to the simulation. 
+
 
 
 
